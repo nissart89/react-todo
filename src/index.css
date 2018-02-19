@@ -3,3 +3,55 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+input {
+  width: 50%;
+  margin: 5rem auto 1rem;
+  display: block;
+  appearance: none;
+  border-width: 0 0 1px 0;
+  border-bottom-color: #222222;
+  padding: .25em;
+  font-size: 2em;
+}
+
+input:focus {
+  outline: none;
+}
+
+.to-do-list {
+  text-align: left;
+  list-style: decimal;
+  display: block;
+  width: 50%;
+  margin: 1rem auto;
+  font-size: 1.5em;
+}
+
+.to-do-list.done  {
+  list-style: none;
+}
+
+.to-do-list.done span {
+  opacity: .5;
+}
+
+@keyframes all-done {
+  0% {
+    opacity: 0;
+    transform: scale(.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.all-done {
+  animation: all-done 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.to-do-container {
+  display: flex;
+  flex-direction: row;
+}
