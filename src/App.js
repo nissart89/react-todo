@@ -57,7 +57,6 @@ class App extends Component {
     }
   }
 
-
   render() {
     const toDos = this.state.toDos.map((todo, index) => <ToDo value={todo} key={index} index={index} handleClick={this.handleClick} handleClickDelete={this.handleClickDelete}/>);
     const doneList = this.state.done.map((doneList, index) => <ToDo done value={doneList} key={index} index={index} handleClick={this.handleClick} handleClickDelete={this.handleClickDelete}/>);
@@ -74,15 +73,16 @@ class App extends Component {
             {this.state.toDos.length === 0 && this.state.init && <div className="init">Wanna get some stuff done?</div>}
             {this.state.toDos.length === 0 && !this.state.init ? <div className="all-done">All done! Good job you!</div> : toDos}
           </ul>
-          {/* <div className="counter">{this.state.toDos.length > 0 && this.state.toDos.length}</div> */}
         </div>
 
-        <div className="to-do-container">
-          <ul className="to-do-list done">
-            {doneList}
-          </ul>
-          {/* <div className="counter">{this.state.done.length > 0 && this.state.done.length}</div> */}
-        </div>
+        {this.state.done.length > 0 &&
+          <div className="to-do-container">
+            <ul className="to-do-list done">
+              <h2>DONE</h2>
+              {doneList}
+            </ul>
+          </div>
+        }
       </div>
     );
   }

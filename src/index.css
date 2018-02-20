@@ -37,7 +37,10 @@ input:focus {
 .to-do-list.done  {
   list-style: none;
 }
-
+.to-do-list.done h2 {
+  font-size: .5em;
+  opacity: .5;
+}
 .to-do-list.done span {
   opacity: .5;
   text-decoration: line-through;
