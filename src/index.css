@@ -28,13 +28,21 @@ input:focus {
   font-size: 1.5em;
 }
 
+.to-do-list.todo img:hover,
+.to-do-list.done img:hover {
+  cursor: pointer;
+}
+
+
 .to-do-list.done  {
   list-style: none;
 }
 
 .to-do-list.done span {
   opacity: .5;
+  text-decoration: line-through;
 }
+
 
 @keyframes all-done {
   0% {

@@ -17,6 +17,7 @@ class ToDo extends Component {
     return (
       <li><span>{this.props.value}</span> {this.state.done ? <img onClick={() => this.props.handleClick(this.state.index, this.state.done)} src={Undo} width="20" height="20" className="delete" alt="Delete" />
         : <img onClick={() => this.props.handleClick(this.state.index, this.state.done)} src={Checked} width="20" height="20" className="delete" alt="Delete" />}
+        &nbsp;<img onClick={() => this.props.handleClickDelete(this.state.index, this.state.done)} src={Delete} width="20" height="20" className="delete" alt="Delete" />
       </li>
     )
   }
